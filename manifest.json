@@ -6,7 +6,8 @@
   "description": "Creates a Windows Task from Auction Url",
 
   "permissions": [
-    "tabs"
+    "tabs",
+    "downloads"
   ],
 
   "browser_action": {
