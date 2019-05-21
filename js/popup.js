@@ -42,20 +42,21 @@ function createTask(id, bid, timestamp) {
   var year = now.getFullYear();
   var day = ('0' + now.getDate()).slice(-2);
   var month = ('0' + (now.getMonth() + 1)).slice(-2);
-  var hour = ('0' + (now.getHours() + 1)).slice(-2);
-  var min = ('0' + (now.getMinutes() + 1)).slice(-2);
-  var sec = ('0' + (now.getSeconds() + 1)).slice(-2);
+  var hour = ('0' + now.getHours()).slice(-2);
+  var min = ('0' + now.getMinutes()).slice(-2);
+  var sec = ('0' + now.getSeconds()).slice(-2);
 
   var currentTime = year + "-" + month + "-" + day + 'T' + hour + ':' + min + ':' + sec + '.' + now.getMilliseconds();
   // '2019-5-20T12:00:00-08:00';
 
   var command = 'ruby file.rb ' + id + ' ' + bid + ' x y';
   console.log(timestamp);
+
   return [
     '<?xml version="1.0" encoding="UTF-16"?>',
     '<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">',
     '  <RegistrationInfo>',
-    '    <Date>2019-05-09T13:54:15.1926486</Date>',
+    '    <Date>' + currentTime + '</Date>',
     '    <Author>DESKTOP-GPH8FUF\\FBA laptop</Author>',
     '    <Description>' + id + ' Bid on Auction</Description>',
     '    <URI>\\' + id + ' Bid on Auction</URI>',
