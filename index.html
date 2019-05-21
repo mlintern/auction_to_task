@@ -2,32 +2,39 @@
 <html>
   <head>
     <title>Auction to Task</title>
-    <link href="dist/css/fontstrap.min.css" rel="stylesheet">
+    <link href="dist/css/theme/fontstrap-square.min.css" rel="stylesheet">
     <link href="css/popup.css" rel="stylesheet">
   </head>
   <body>
 
     <div class="container">
-      <h2 class='page-header'><img alt='Auction to Task Logo' src="img/icon.png" width="35" /> Auction to Task</h2>
+      <h2 class='page-header text-center pt-3 shadow'>Auction to Task</h2>
 
       <form class="auction-to-task-form py-3">
         <div class="form-group">
-          <label>Auction Id</label>
+          <label class="font-weight-bolder">Auction Id</label>
           <input type="text" class="form-control auction-id" placeholder="Auction Id">
         </div>
         <div class="form-group">
-          <label>Auction Bid</label>
+          <label class="font-weight-bolder">Auction Bid</label>
           <input type="number" class="form-control auction-bid" placeholder="Auction Bid">
         </div>
-        <div class="form-group">
-          <label>Date</label>
-          <input type="date" class="form-control auction-date" placeholder="Date">
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="font-weight-bolder">Date</label>
+              <input type="date" class="form-control auction-date" placeholder="Date">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label class="font-weight-bolder">Time</label>
+              <input type="time" class="form-control auction-time" placeholder="Time">
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Time</label>
-          <input type="time" class="form-control auction-time" placeholder="Time">
-        </div>
-        <button type="submit" class="btn btn-primary">Download Task</button>
+        <button type="submit" class="btn btn-block btn-success btn-lg">Download Task</button>
       </form>
     </div>
 
