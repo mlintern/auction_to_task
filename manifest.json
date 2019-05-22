@@ -5,6 +5,12 @@
   "version": "1.0",
   "description": "Creates a Windows Task from Auction Url",
 
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+
   "permissions": [
     "tabs",
     "downloads"
